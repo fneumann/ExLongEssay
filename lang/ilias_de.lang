@@ -1,0 +1,21 @@
+//
+// Copyright (c) 2020 Institut fuer Lern-Innovation, Friedrich-Alexander-Universitaet Erlangen-Nuernberg
+// GPLv3, see LICENSE
+//
+// @author Fred Neumann <fred.neumann@fau.de>
+// @version $Id$
+//
+
+<!-- language file start -->
+type_long_essay#:#Langes Essay
+update_languages#:#Sprachen aktualisieren
+generate_db_update#:#Datenbank-Update generieren
+basic_configuration#:#Basis-Konfiguration
+assignment_uuid#:#UUID
+assignment_uuid_info#:#Die UUID wird zur Kommunikation mit den Editor- und Korrektur-Komponenten benötigt.
+manage_correctors#:#Korrektoren verwalten
+manage_correctors_info#:#Aktiviert die Zuteilung von Korrektoren zu den Abgaben.
+exlongessay_settings#:#Essay-Einstellungen
+
+
+

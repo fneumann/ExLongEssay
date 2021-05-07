@@ -95,13 +95,50 @@ class ilExLongEssayPlugin extends ilAssignmentHookPlugin
     }
 
     /**
+     * Get the string identifiers of the available assignment types
+     * plugin authors have to take care of unique string identifiers
+     * @return string[]
+     */
+    function getAssignmentTypeStringIdentifiers()
+    {
+        return ['long_essay'];
+    }
+
+    /**
+     * Get an assignment type by its string identifier
+     * @param string $a_identifier
+     * @return ilExAssignmentTypeInterface
+     */
+    function getAssignmentTypeByStringIdentifier(string $a_identifier)
+    {
+        if ($a_identifier == 'long_essay') {
+            return new ilExAssTypeLongEssay($this);
+        }
+        return new ilExAssTypeInactive();
+    }
+
+    /**
+     * Get an assignment type GUI by its string identifier
+     * @param string $a_identifier
+     * @return ilExAssignmentTypeGUIInterface
+     */
+    function getAssignmentTypeGuiByStringIdentifier(string $a_identifier)
+    {
+        if ($a_identifier == 'long_essay') {
+            return new ilExAssTypeLongEssayGUI($this);
+        }
+        return new ilExAssTypeLongEssayGUI($this);
+    }
+
+    /**
      * Get the class names of the assignment type GUIs
-     * @return string[] (indexed by type id)
+     * @return string[] (indexed by string identifier)
      */
     public function getAssignmentTypeGuiClassNames() {
         return [
-            50 => 'ilExAssTypeLongEssayGUI',
+            'long_essay' => 'ilExAssTypeLongEssayGUI',
         ];
     }
+
 
 }

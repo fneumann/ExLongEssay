@@ -100,6 +100,6 @@ class ilExAssTypeLongEssay implements ilExAssignmentTypeInterface
      */
     public function getStringIdentifier(): string
     {
-        return 'ilExAssTypeLongEssay';
+        return 'long_essay';
     }
 }

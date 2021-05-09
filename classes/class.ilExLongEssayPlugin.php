@@ -122,7 +122,7 @@ class ilExLongEssayPlugin extends ilAssignmentHookPlugin
      * @param string $a_identifier
      * @return ilExAssignmentTypeGUIInterface
      */
-    function getAssignmentTypeGuiByStringIdentifier(string $a_identifier)
+    function getAssignmentTypeGUIByStringIdentifier(string $a_identifier)
     {
         if ($a_identifier == 'long_essay') {
             return new ilExAssTypeLongEssayGUI($this);

@@ -73,6 +73,14 @@ class ilExAssTypeLongEssay implements ilExAssignmentTypeInterface
     /**
      * @inheritdoc
      */
+    public function isManualGradingSupported($a_ass): bool
+    {
+        return true;
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function cloneSpecificProperties(ilExAssignment $source, ilExAssignment $target)
     {
         require_once (__DIR__ . '/models/class.ilExLongEssayAssignment.php');
